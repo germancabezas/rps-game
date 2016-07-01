@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Title of the document</title>
+</head>
+
+<body>
+
+
+
+
+<script>
+
+var userChoice = prompt("Do you choose rock, paper or scissors?");
+var computerChoice = Math.random();
+if (computerChoice < 0.34) {
+  computerChoice = "rock";
+} else if(computerChoice <= 0.67) {
+  computerChoice = "paper";
+} else {
+  computerChoice = "scissors";
+}
+
+
+function compare(userChoice, computerChoice) {
+    if (userChoice === computerChoice) {
+                alert( "The result is a tie!");
+    }   else if (userChoice === "rock"){
+            if (computerChoice ==="scissors") {
+                alert( "computer: " + computerChoice + " Your Choice: " + userChoice + " YOU WIN!");
+        }   else {
+                alert( "computer: " + computerChoice + " Your Choice: " + userChoice + " COMPUTER WINS!");
+        }
+    }   else if (userChoice === "paper") {
+            if (computerChoice ==="rock") {
+                alert( "computer: " + computerChoice + " Your Choice: " + userChoice + " YOU WIN!");
+            }   else {
+                alert( "computer: " + computerChoice + " Your Choice: " + userChoice + " COMPUTER WINS!");
+            }
+    }   else if (userChoice === "scissors") {
+            if (computerChoice ==="rock") {
+                alert( "computer: " + computerChoice + " Your Choice: " + userChoice + " COMPUTER WINS!");
+            }   else {
+                alert( "computer: " + computerChoice + " Your Choice: " + userChoice + " YOU WIN!");
+            }
+    }   else {
+            alert( "That is not a word I can process" );
+    }
+}
+
+compare(userChoice, computerChoice);
+
+</script>
+</body>
+
+</html>
